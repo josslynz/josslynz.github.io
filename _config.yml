@@ -1,12 +1,12 @@
 # Site settings
-title: A blog about lorem ipsum dolor sit amet
-description: A blog about lorem ipsum dolor sit amet
+title: Josslyn Zhang's personal website
+description: Josslyn Zhang's personal website
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 url: "https://josslynz.github.io"
 # User settings
 username: Josslyn Zhang
-user_description: I'm Josslyn Zhang, a newly graduate in Statistics, Computer Science and Mathematics.I always dream about being a data engineer and I'm based in Denver, Colorado. I started college originally with an English degree. However, I have been having questions about how would search engines recommend topics we want to figure out, or why my favorite online shopping site would send me emails on items I browsed recently. That curiosity drove me to work with data and hopefully to solve all the questions I had myself. I've been playing with mathematical modelling and data prediction in my spare time. I also like to do volunteer work, to travel all over the world, to try all kinds of street food and to learn more extreme sports such as surfing and diving.
+user_description: I'm Josslyn Zhang, a recent graduate in Statistics, Computer Science and Mathematics. I'm currently based in Denver, Colorado and in the future I hope to work as a Data Engineer. My curiosity for search and recommendation engines drove me to work with data in academia. I've recently been experimenting with mathematical modelling and data prediction in my spare time with Python, leveraging tools such as TensorFlow. I also enjoy volunteer work, travel, street food and in the future I hope to learn surfing and diving.
 user_title: Aspiring Data Engineer
 email: josszhang11@gmail.com
 linkedin: "josslynz"
