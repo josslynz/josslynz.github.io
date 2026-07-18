@@ -1,6 +1,12 @@
 /* sweetScroll load */
 document.addEventListener("DOMContentLoaded", function () {
-  const sweetScroll = new SweetScroll({/* some options */});
+  if (typeof SweetScroll !== "undefined") {
+    new SweetScroll({/* some options */});
+  }
+
+  if (typeof particlesJS === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
 
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
   particlesJS('particles-js', {
