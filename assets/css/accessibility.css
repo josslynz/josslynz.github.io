@@ -49,8 +49,16 @@ a:focus-visible {
   max-width: 760px;
 }
 
+.about-intro .about-copy {
+  display: grid;
+  gap: 16px;
+  margin: 28px auto 40px;
+  text-align: left;
+}
+
 .about-intro p {
-  line-height: 1.8;
+  margin: 0;
+  line-height: 1.75;
 }
 
 .user.toolkit {
@@ -69,9 +77,8 @@ a:focus-visible {
 }
 
 .tool-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
   margin: 18px 0 0;
   padding: 0;
@@ -80,13 +87,13 @@ a:focus-visible {
 
 .tool-list li {
   display: flex;
-  flex: 0 0 82px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
   min-height: 74px;
-  padding: 12px 8px;
+  min-width: 0;
+  padding: 12px 4px;
   border: 1px solid rgba(51, 51, 51, 0.16);
   border-radius: 14px;
   background: #fff;
@@ -104,7 +111,7 @@ a:focus-visible {
 
 .tool-list span {
   line-height: 1.2;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .current-focus {
@@ -174,35 +181,10 @@ a:focus-visible {
   line-height: 1.6;
 }
 
-.beyond-work {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 28px 0 0;
-  color: #555;
-}
-
-.beyond-work > span {
-  font-weight: 700;
-}
-
-.beyond-work ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.beyond-work li {
-  padding: 6px 11px;
-  border-radius: 999px;
-  background: #eef1f4;
-  font-size: 14px;
+@media only screen and (max-width: 480px) {
+  .tool-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media only screen and (min-width: 768px) {

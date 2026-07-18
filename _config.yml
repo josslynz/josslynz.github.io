@@ -6,11 +6,14 @@ description: Engineering manager exploring practical, human-centered AI systems.
 url: "https://josslynz.github.io"
 # User settings
 username: Josslyn Zhang
-user_description: "I'm Josslyn Zhang, an engineering manager based in Northern Colorado. I love helping teams turn complex ideas into dependable software, and I'm especially curious about where thoughtful engineering and practical AI meet. My background in statistics, computer science, and mathematics keeps me asking good questions and looking for patterns. Outside of work, you'll usually find me planning a trip, trying a new restaurant, spending time with dogs, or volunteering in my community."
+user_intro: "I'm Josslyn Zhang, an engineering manager based in Northern Colorado. I love helping teams turn ambitious, complex ideas into dependable software—and creating the clarity and trust that helps people do their best work."
+user_background: "My background spans engineering leadership, statistics, computer science, and mathematics. It shapes how I approach practical AI: curious about the possibilities, grounded in sound engineering, and focused on outcomes that are genuinely useful."
+user_outside_work: "Outside of work, I'm usually planning a trip around what I want to eat, spending time with dogs, or volunteering in my community."
 user_title: "Engineering Manager | AI-Focused Builder"
 email: josszhang11@gmail.com
 linkedin: "josslynz"
 github_username: josslynz
+workapplied_url: "https://workapplied.ai"
 resume_url:
 
 # Google-analytics

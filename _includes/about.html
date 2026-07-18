@@ -1,6 +1,10 @@
 <div class="user-details about-intro">
   <h1 id="about-heading">About</h1>
-  <p> {{site.user_description}} </p>
+  <div class="about-copy">
+    <p>{{site.user_intro}}</p>
+    <p>{{site.user_background}}</p>
+    <p>{{site.user_outside_work}}</p>
+  </div>
 </div>
   <div class="user toolkit">
     <div class="tech">
@@ -49,20 +53,10 @@
     <span class="status-pill">In development</span>
     <h2 id="current-work-heading">WorkApplied</h2>
     <p>Practical, measurable AI workflows that help teams move from experimentation to useful everyday work.</p>
-    <a class="focus-link" href="https://workapplied.ai" target="_blank" rel="noopener noreferrer">Visit WorkApplied <span aria-hidden="true">→</span></a>
+    <a class="focus-link" href="{{site.workapplied_url}}" target="_blank" rel="noopener noreferrer">Visit WorkApplied <span aria-hidden="true">→</span></a>
   </div>
   <div class="profile-notes">
     <p><strong>Currently exploring</strong><br>Android and mobile app development</p>
     <p><strong>Languages</strong><br>Native Mandarin Chinese · French (A2)</p>
   </div>
 </section>
-
-<div class="beyond-work" aria-label="Interests beyond work">
-  <span>Beyond work</span>
-  <ul>
-    <li>Travel</li>
-    <li>Food</li>
-    <li>Dogs</li>
-    <li>Volunteering</li>
-  </ul>
-</div>

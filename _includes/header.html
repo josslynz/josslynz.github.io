@@ -6,9 +6,13 @@
       </h1>
       <div class="header-icons">
         <a aria-label="Send email" href="mailto:{{site.email}}"><i class="icon fa fa-envelope" aria-hidden="true"></i></a>
-        {% if site.resume_url %}<a aria-label="Resume" target="_blank" rel="noopener noreferrer" href="{{ site.resume_url | relative_url }}"><i class="icon fa fa-file-text" aria-hidden="true"></i></a>{% endif %}
         <a aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/{{site.linkedin}}"><i class="icon fa fa-linkedin-square" aria-hidden="true"></i></a>
         <a aria-label="GitHub profile" target="_blank" rel="noopener noreferrer" href="https://www.github.com/{{site.github_username}}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+        {% if site.resume_url %}
+          <a aria-label="Resume" target="_blank" rel="noopener noreferrer" href="{{ site.resume_url | relative_url }}"><i class="icon fa fa-file-text" aria-hidden="true"></i></a>
+        {% else %}
+          <a aria-label="WorkApplied website" title="WorkApplied" target="_blank" rel="noopener noreferrer" href="{{site.workapplied_url}}"><i class="icon fa fa-briefcase" aria-hidden="true"></i></a>
+        {% endif %}
       </div>
       <nav class="header-links" aria-label="Primary navigation">
         <a class="link" href="#about" data-scroll>About Me</a>
