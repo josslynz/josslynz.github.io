@@ -1,124 +1,70 @@
-/* sweetScroll load */
+/* sweetScroll and interactive hero particles */
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof SweetScroll !== "undefined") {
-    new SweetScroll({/* some options */});
+    new SweetScroll({});
   }
 
   if (typeof particlesJS === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     return;
   }
 
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS('particles-js', {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: window.innerWidth < 768 ? 24 : 42,
+        density: { enable: true, value_area: 800 }
       },
-      "color": {
-        "value": "#ffffff"
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: {
+        value: 0.42,
+        random: true,
+        anim: { enable: false }
       },
-      "shape": {
-        "type": "polygon",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
+      size: {
+        value: 2.6,
+        random: true,
+        anim: { enable: false }
       },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
+      line_linked: {
+        enable: true,
+        distance: 145,
+        color: "#ffffff",
+        opacity: 0.24,
+        width: 1
       },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 19.18081918081918,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 4,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      },
-      nb: 80
-    },
-    "interactivity": {
-      "detect_on": "window",
-      "events": {
-        "onhover": {
-          "enable": false,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
+      move: {
+        enable: true,
+        speed: 1.7,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false }
       }
     },
-    "retina_detect": true
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 170,
+          line_linked: { opacity: 0.65 }
+        },
+        push: { particles_nb: 3 }
+      }
+    },
+    retina_detect: true
   });
 
+  var particleCanvas = document.querySelector("#particles-js canvas");
+  if (particleCanvas) {
+    particleCanvas.setAttribute("aria-hidden", "true");
+    particleCanvas.setAttribute("tabindex", "-1");
+  }
 }, false);

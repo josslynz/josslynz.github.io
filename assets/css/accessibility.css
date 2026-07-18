@@ -18,11 +18,21 @@ a:focus-visible {
 }
 
 #particles-js .particles-js-canvas-el {
-  display: none;
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .header {
+  z-index: 1;
   width: min(90vw, 920px);
+}
+
+.down {
+  z-index: 2;
 }
 
 .header .site-title {
@@ -206,6 +216,10 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  #particles-js .particles-js-canvas-el {
+    display: none;
+  }
+
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
