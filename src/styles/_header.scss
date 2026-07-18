@@ -1,5 +1,10 @@
 #particles-js {
-  background: $main;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(87, 104, 255, 0.22), transparent 34%),
+    radial-gradient(circle at 82% 78%, rgba(35, 193, 190, 0.14), transparent 32%),
+    linear-gradient(145deg, #151d28 0%, #1a2635 52%, #111822 100%);
   display: flex;
   vertical-align: bottom;
   width: 100%;
@@ -8,8 +13,7 @@
   background-size: cover;
   background-attachment: fixed;
   .particles-js-canvas-el {
-    width:100% !important;
-    height:100vh !important;
+    display: none;
   }
 }
 
@@ -21,26 +25,28 @@
   top: 50%;
   left: 50%;
   margin: 0 auto;
+  width: min(90vw, 920px);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   .site-title {
-    font-size: 50px;
+    font-size: clamp(3rem, 10vw, 6.25rem);
     display: block;
     line-height: 1;
     color: #FFF;
+    white-space: nowrap;
     @media only screen and (min-width:$cut){
       margin: 0;
-      font-size: 100px;
+      font-size: clamp(4rem, 8vw, 6.25rem);
     }
   }
   .site-description {
-    font-size: 20px;
+    font-size: clamp(1.15rem, 4vw, 2.2rem);
     display: block;
-    line-height: 1;
+    line-height: 1.2;
     color: #FFF;
     margin-top: 10px;
     @media only screen and (min-width:$cut){
-      font-size: 40px;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
     }
   }
 }
